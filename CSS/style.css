@@ -117,6 +117,7 @@ img{
     align-items: center;
     max-height: 2.5rem;
     padding: 0 0.25rem;
+    font-size: 1.5rem;
 }
 
 .nav-left-section{
@@ -126,9 +127,9 @@ img{
 }
 
 .nav-center-section{
-    display: flex;
-    justify-content: center;
-    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-0%);
 }
 
 .logo-img h1{
@@ -159,7 +160,8 @@ img{
 
 .payment-card-container{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
+    overflow-x: auto;
     padding: 1rem;
     gap: 0.5rem;
 }
@@ -173,14 +175,495 @@ img{
     font-weight: 1100;
     line-height: 1.1;
     text-align: center;
+    flex-shrink: 0;
 }
 
 /* close payment container */
+
+.banner-container{
+    max-width: 100vw;
+}
+
 .banner-text-container{
-    display: grid;
-    grid-template-areas: 
-        "banner-text-card-1 banner-text-card-2 banner-text-card-3"
-        ". code-card .";
+    padding: 0 0.5rem;
+}
+
+.banner-text-card-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.banner-text-card{
+    display: flex;
+    flex-direction: column;
+    padding: 0.25rem;
+    text-align: center;
+    font-size: 75%;
+}
+
+.banner-text-card-head{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.banner-text-card-head span{
+    background-color: #000;
+    color: #fff;
+    padding: 0rem 0.5rem;
+}
+
+.banner-text-code-container{
+    display: flex;
+    justify-content: center;
+}
+
+.banner-text-code{
+    width: fit-content;
 }
 
 /* set grid */
+.banner-text-card:nth-child(1){
+    grid-area: banner-text-card-1;
+}
+
+.banner-text-card:nth-child(2){
+    grid-area: banner-text-card-2;
+}
+
+.banner-text-card:nth-child(3){
+    grid-area: banner-text-card-3;
+}
+
+.banner-text-code{
+    grid-area: code-card;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 0.25rem 1rem;
+}
+/* close banner */
+
+.category-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.category-header-container{
+    margin-top: 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: #fadadd;
+    padding: 0 0.5rem;
+}
+
+.category-header{
+    position: relative; 
+    left: 50%;
+    transform: translate(-50%,-20%);
+}
+
+.category-header h1{
+    font-size: 4vw;
+    text-align: center;
+    padding: 0.5rem;
+    background-color: #f98b88;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    color: lightyellow;
+}
+
+.category-viewAll-btn button{
+    font-size: 2vw;
+    background-color: #C7372F;
+    color: #fff;
+    border-style: none;
+    border-radius: 0.25rem;
+    padding: 0.1rem 0.25rem;
+}
+
+/* close catergory head */
+
+.category-items-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.category-items-row{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.category-item-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+    font-size: 4vw;
+}
+
+.category-item-icon{
+    background-color: #fadadd;
+    padding: 0.5rem 0.85rem;
+    border-radius: 50%;
+}
+/* close category item */
+
+.deal-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.deal-items-container{
+    display: grid;
+    grid-template-areas: 
+        "deal-1 deal-1"
+        "deal-2 deal-3";
+    gap: 0.5rem;
+}
+
+.deal-header{
+    text-align: center;
+    font-size: 0.65rem;
+}
+
+.deal-item-card-img{
+    height: 12rem;
+}
+
+.deal-item-card:nth-child(1){
+    grid-area: deal-1;
+}
+
+.deal-item-card:nth-child(2){
+    grid-area: deal-2;
+}
+
+.deal-item-card:nth-child(3){
+    grid-area: deal-3;
+}
+
+.deal-item-card img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 0% 0%;
+}
+/* close deal */
+
+.flashSale-container{
+    background-color: #FFE194;
+    margin-top: 0.5rem;
+}
+
+.flashSale-banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.25vw;
+    padding: 0.5rem;
+    gap: 0.5rem;
+}
+
+.flashSale-Banner-text-1{
+    color: orange;
+    text-shadow: 2px 2px #fff;
+}
+
+.flashSale-Banner-text-2{
+    color: #fff;
+    font-size: 0.5rem;
+}
+
+.flashSale-Banner-text-3{
+    color: #F14A16;
+    text-shadow: 1.5px 0 #F14A16;
+}
+
+.flashSale-header{
+    font-size: 0.75rem;
+    text-align: center;
+    text-shadow: 0.5px 0 #000;
+    font-weight: 900;
+}
+
+.flashSale-timer-container{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 0.5rem;
+    gap: 0.5rem;
+}
+
+.flashSale-timer-text{
+    font-size: 0.6rem;
+}
+
+.flashSale-timer-text span{
+    background-color: #000;
+    color: #fff;
+    padding: 0.15rem;
+}
+
+.flashSale-next-btn button{
+    background-color: #fff0;
+    border-style: none;
+    font-weight: 900;
+}
+
+.flashSale-items-container{
+    padding: 1rem 0 1rem 1rem;
+    display: flex;
+    overflow:auto;
+    gap: 0.5rem;
+}
+
+.flashSale-item-card{
+    background-color: #fff;
+    max-width: 8rem;
+    min-height: 12.5rem;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.flashSale-item-discount{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFE400;
+    max-width: fit-content;
+    padding: 0.1rem;
+}
+
+.flashSale-item-img{
+    padding: 0.1rem;
+}
+
+.flashSale-item-img img{
+    padding: 0.1rem;
+    min-height: 9.5rem;
+    object-fit: cover;
+}
+
+.flashSale-item-newPrice{
+    font-size: 0.75rem;
+    color: #F14A16;
+    padding-left: 0.25rem;
+}
+
+.flashSale-item-oldPrice{
+    font-size: 0.65rem;
+    color: gray;
+    padding-left: 0.25rem;
+    text-decoration: line-through;
+}
+/* close flash sale */
+
+.brandWeLove-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.brandWeLove-header{
+    text-align: center;
+    font-size: 2.5vw;
+    font-weight: 900;
+    padding: 1rem 0.5rem 0rem 0.5rem;
+}
+
+.brandWeLove-items-container{
+    display: flex;
+    padding: 1rem 0 1rem 1rem;
+    overflow-x: auto;
+    gap: 0.5rem;
+}
+
+.brandWeLove-item-card{
+    display: flex;
+    position: relative;
+    flex-shrink: 0;
+    max-width: 10rem;
+    height: 14rem;
+}
+
+.brandWeLove-item-discount{
+    color: #fff;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,0,0,1) 20%);
+    width: fit-content;
+    text-align: center;
+    padding: 0.25rem;
+    position: absolute;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    top: -2%;
+}
+
+.brandWelove-item-text-container{
+    align-self: flex-end;
+    position: absolute;
+    display: flex;
+    background-color: #0008;
+    color: #fff;
+    width: 100%;
+    height: 3rem;
+    padding: 0.25rem;
+    font-size: 0.65rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brandWeLove-item-img img{
+    object-fit: cover;
+    height: 100%;
+}
+
+.dailyDrops-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+    gap: 0.5rem;
+}
+
+.dailyDrops-header{
+    text-align: center;
+    font-size: 2vw;
+}
+
+.dailyDrops-banner{
+    height: 12rem;
+    width: 100%;
+}
+
+.dailyDrops-banner img{
+    object-fit: cover;
+    object-position: 0% 0%;
+    width: 100%;
+}
+
+.dailyDrops-item-cards-container{
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem 0 0.5rem 0.5rem;
+    overflow-x: auto;
+}
+
+.dailyDrops-item-card{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 6rem;
+    flex-shrink: 0;
+}
+
+.dailyDrops-item-discount{
+    position:absolute;
+    margin-top: 0.25rem;
+    padding: 0.2rem;
+    background-color: #000;
+    color: #fff;
+}
+
+.dailyDrops-item-img{
+    width: 100%;
+    height: 100%;
+}
+
+.dailyDrops-item-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dailyDrops-item-price{
+    color: rgb(49, 49, 49);
+    padding-top: 0.1rem;
+}
+/* close dailyDrop */
+
+.campaigns-containers{
+    margin-top: 0.5rem;
+}
+
+.campaigns-header{
+    font-size: 2vw;
+    text-align: center;
+}
+
+.campaigns-items-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.campaigns-slider-banner{
+    display: flex;
+    overflow-x: auto;
+}
+
+.campaigns-slider-banner-img{
+    position: relative;
+    flex-shrink: 0;
+}
+
+.campaigns-slider-banner-img img{
+    max-height: 12rem;
+    width: 100vw;
+    object-fit: cover;
+    object-position: 0 0;
+}
+
+.campaigns-static-banner img{
+    max-height: 12rem;
+    width: 100vw;
+    object-fit: cover;
+    object-position: 0 0;
+}
+/* close campaigns */
+
+.footer-container{
+    background-color: #ececec;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-header{
+    font-size: 0.5rem;
+    font-weight: 900;
+}
+
+.footer-item-card{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-item-card h1{
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.footer-item-card button{
+    background-color: #fff0;
+    color: gray;
+    border-style: none;
+    font-weight: 900;
+}
+
+.footer-items-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
